@@ -1,0 +1,12 @@
+count = 0
+def pattern_str(str1,count):
+    length = len(str1)
+    mid = int(length/2)
+    if str1[:mid] == str1[mid:]:
+        count+=2
+        return pattern_str(str1[:mid],count)
+    return count
+str1 = 'abcabcabcabc'
+print(pattern_str(str1,0))
+str2 = 'abccbaabccba'
+print(pattern_str(str2,0))
